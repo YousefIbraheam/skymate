@@ -9,8 +9,18 @@ import { Textarea } from "../components/ui/fields";
 import { Card, PageTitle } from "../components/ui/Section";
 import { cn } from "../lib/cn";
 
+const meaningAr: Record<string, string> = {
+  "Hello": "مرحباً",
+  "Thank you": "شكراً",
+  "How much is this?": "بكام ده؟",
+  "Where is the toilet?": "فين الحمّام؟",
+  "No spice, please": "من غير حار، لو سمحت",
+};
+
 export function TranslatorPage() {
-  const { m } = useI18n();
+  const { m, lang } = useI18n();
+  const langName = (code: string, fallback: string) =>
+    lang === "ar" ? new Intl.DisplayNames(["ar"], { type: "language" }).of(code) ?? fallback : fallback;
   const [code, setCode] = useState(phraseLanguages[0].code);
   const [scanNote, setScanNote] = useState(false);
   const [text, setText] = useState("");
@@ -31,7 +41,7 @@ export function TranslatorPage() {
       <div role="group" aria-label={m.translator.language} className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 py-1">
         {phraseLanguages.map((l) => (
           <Button key={l.code} size="sm" variant={l.code === code ? "default" : "outline"} aria-pressed={l.code === code} onClick={() => { setCode(l.code); setResult(""); }}>
-            <Flag code={l.country} /> {l.name}
+            <Flag code={l.country} /> {langName(l.code, l.name)}
           </Button>
         ))}
       </div>
@@ -42,7 +52,7 @@ export function TranslatorPage() {
           {language.phrases.map((phrase) => (
             <li key={phrase.en} className="flex items-center justify-between gap-3 rounded-2xl bg-muted p-3">
               <div>
-                <p className="text-xs text-muted-foreground">{phrase.en}</p>
+                <p className="text-xs text-muted-foreground">{lang === "ar" ? meaningAr[phrase.en] ?? phrase.en : phrase.en}</p>
                 <p className="text-lg font-semibold">{phrase.text}</p>
               </div>
               <Button variant="ghost" size="icon" aria-label="Play" onClick={() => speak(phrase.text)}><Volume2 /></Button>
