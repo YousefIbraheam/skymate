@@ -46,6 +46,12 @@ const seedSpots: CommunitySpot[] = [
   { id: "s2", name: "Tea stall behind the fort", where: "Jaipur", text: "Best masala chai in town, cash only.", author: "Karim", status: "approved" },
 ];
 
+/** Arabic text for the two seeded spots (user-submitted spots stay as written). */
+export const seedSpotsAr: Record<string, Pick<CommunitySpot, "name" | "where" | "text" | "author">> = {
+  s1: { name: "غاط الشروق", where: "فاراناسي", text: "اركب قارباً عند 5:30 لتستمتع بضوء هادئ على النهر.", author: "منى" },
+  s2: { name: "كشك الشاي خلف الحصن", where: "جايبور", text: "أفضل شاي ماسالا في المدينة، الدفع نقداً فقط.", author: "كريم" },
+};
+
 const read = <T,>(key: string, fallback: T): T => {
   try {
     const raw = window.localStorage.getItem(key);
