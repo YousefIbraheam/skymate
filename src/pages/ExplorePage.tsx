@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Search } from "lucide-react";
 import { categories, countries, destinations, dishes, getCountry, getDestination, places } from "../data";
@@ -11,7 +11,7 @@ import { EmptyState } from "../components/ui/Section";
 type Sort = "rating" | "cost" | "name";
 
 export function ExplorePage() {
-  const { m } = useI18n();
+  const { m, lang } = useI18n();
   const [params, setParams] = useSearchParams();
   const query = params.get("q") ?? "";
   const category = params.get("category") ?? "";
@@ -29,8 +29,16 @@ export function ExplorePage() {
 
   const regions = useMemo(
     () => [...new Set(destinations.filter((d) => !country || d.country === country).map((d) => d.region))].sort(),
-    [country],
+    [country, lang],
   );
+  useEffect(() => {
+    setParams((prev) => {
+      if (!prev.get("region")) return prev;
+      const next = new URLSearchParams(prev);
+      next.delete("region");
+      return next;
+    }, { replace: true });
+  }, [lang]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const q = query.trim().toLowerCase();
   const filteredDestinations = destinations.filter(

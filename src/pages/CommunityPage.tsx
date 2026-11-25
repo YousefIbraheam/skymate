@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import { listCommunitySpots, submitCommunitySpot, type CommunitySpot } from "../api/client";
+import { listCommunitySpots, seedSpotsAr, submitCommunitySpot, type CommunitySpot } from "../api/client";
 import { useAuth } from "../hooks/useAuth";
 import { useI18n } from "../i18n";
 import { Button } from "../components/ui/Button";
@@ -8,7 +8,7 @@ import { Input, Textarea } from "../components/ui/fields";
 import { Card, EmptyState, PageTitle } from "../components/ui/Section";
 
 export function CommunityPage() {
-  const { m } = useI18n();
+  const { m, lang } = useI18n();
   const { user } = useAuth();
   const [spots, setSpots] = useState<CommunitySpot[]>([]);
   const [name, setName] = useState("");
@@ -44,7 +44,9 @@ export function CommunityPage() {
       </Card>
       {spots.length === 0 && <EmptyState>{m.community.empty}</EmptyState>}
       <div className="grid gap-4 sm:grid-cols-2">
-        {spots.map((spot) => (
+        {spots.map((raw) => {
+          const spot = lang === "ar" && seedSpotsAr[raw.id] ? { ...raw, ...seedSpotsAr[raw.id] } : raw;
+          return (
           <article key={spot.id} className="rounded-3xl bg-card p-5 shadow-soft">
             <p className="text-xs font-semibold uppercase tracking-widest text-teal">{spot.where}</p>
             <h2 className="mt-1 text-xl font-semibold">{spot.name}</h2>
@@ -54,7 +56,8 @@ export function CommunityPage() {
               <span>{spot.status === "approved" ? m.community.approved : m.community.pending}</span>
             </p>
           </article>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Bookmark, Clock, Info, Star, Trash2, Wallet } from "lucide-react";
-import { formatMoney, getDestination, getPlace } from "../data";
+import { categories, formatMoney, getDestination, getPlace } from "../data";
 import { actions, useAppState } from "../store/appStore";
 import { useI18n } from "../i18n";
 import { Button } from "../components/ui/Button";
@@ -47,7 +47,7 @@ export function PlacePage() {
           </div>
         </div>
         <div className="space-y-5 lg:col-span-2">
-          <p className="text-sm font-semibold text-teal">{place.category}</p>
+          <p className="text-sm font-semibold text-teal">{categories.find((c) => c.id === place.category)?.label ?? place.category}</p>
           <h1 className="mt-1 text-4xl font-semibold">{place.name}</h1>
           <p className="text-muted-foreground">{place.description}</p>
           <div className="grid grid-cols-3 gap-2 text-center text-sm">

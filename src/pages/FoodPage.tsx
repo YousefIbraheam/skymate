@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Check, Flame, Heart } from "lucide-react";
 import { dishes, formatMoney, getDestination } from "../data";
@@ -10,13 +10,14 @@ import { Photo } from "../components/ui/Photo";
 import { cn } from "../lib/cn";
 
 export function FoodPage() {
-  const { m } = useI18n();
+  const { m, lang } = useI18n();
   const country = useAppState((s) => s.country);
   const wanted = useAppState((s) => s.foodWanted);
   const tried = useAppState((s) => s.foodTried);
   const [query, setQuery] = useState("");
   const [mineOnly, setMineOnly] = useState(true);
   const [region, setRegion] = useState("");
+  useEffect(() => setRegion(""), [lang]);
 
   const inScope = dishes.filter((d) => !mineOnly || getDestination(d.destinationId)?.country === country);
   const regions = [...new Set(inScope.map((d) => getDestination(d.destinationId)?.region ?? ""))].filter(Boolean).sort();

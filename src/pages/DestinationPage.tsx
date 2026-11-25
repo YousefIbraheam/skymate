@@ -10,11 +10,11 @@ import { Card, EmptyState } from "../components/ui/Section";
 import { PlaceCard } from "../components/ui/Cards";
 import { cn } from "../lib/cn";
 
-const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 export function DestinationPage() {
   const { id = "" } = useParams();
-  const { m } = useI18n();
+  const { m, lang } = useI18n();
+  const monthNames = Array.from({ length: 12 }, (_, i) => new Date(2024, i, 1).toLocaleDateString(lang === "ar" ? "ar" : "en-US", { month: "short" }));
   const destination = getDestination(id);
   const [month, setMonth] = useState(new Date().getMonth() + 1);
 
