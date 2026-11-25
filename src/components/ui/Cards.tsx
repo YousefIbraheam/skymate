@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Bookmark, MapPin, Star } from "lucide-react";
 import type { Destination, Place } from "../../data/types";
-import { formatMoney } from "../../data";
+import { categories, formatMoney } from "../../data";
 import { actions, useAppState } from "../../store/appStore";
 import { Photo } from "./Photo";
 import { cn } from "../../lib/cn";
@@ -34,7 +34,7 @@ export function PlaceCard({ place }: { place: Place }) {
         <div className="p-4">
           <div className="flex items-center gap-1 text-xs text-muted-foreground">
             <MapPin className="h-3 w-3" />
-            <span className="line-clamp-1">{place.category}</span>
+            <span className="line-clamp-1">{categories.find((c) => c.id === place.category)?.label ?? place.category}</span>
             <span className="ms-auto flex items-center gap-0.5 font-semibold text-foreground">
               <Star className="h-3 w-3 fill-sun text-sun" />
               {place.rating.toFixed(1)}
