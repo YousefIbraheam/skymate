@@ -1,0 +1,515 @@
+[
+ {
+  "id": "udaipur",
+  "name": "Udaipur",
+  "country": "IN",
+  "region": "Rajasthan",
+  "tagline": "The city of lakes",
+  "description": "Whitewashed palaces rise from Lake Pichola, rooftop cafés glow at sunset, and narrow lanes hide miniature-painting studios. Udaipur is Rajasthan at its most romantic and unhurried.",
+  "image": "https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?auto=format&fit=crop&w=1200&q=70",
+  "gradient": "linear-gradient(150deg, oklch(0.55 0.1 230), oklch(0.75 0.12 60))",
+  "lat": 24.5854,
+  "lng": 73.7125,
+  "bestTime": "Oct – Mar",
+  "dailyBudget": 3500,
+  "tags": [
+   "Lakes",
+   "Palaces",
+   "Romantic"
+  ]
+ },
+ {
+  "id": "jaipur",
+  "name": "Jaipur",
+  "country": "IN",
+  "region": "Rajasthan",
+  "tagline": "The pink city",
+  "description": "Terracotta façades, hilltop forts and bazaars piled with block-printed cotton. Jaipur is bold, busy and deeply rewarding for heritage lovers.",
+  "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=70",
+  "gradient": "linear-gradient(150deg, oklch(0.62 0.13 30), oklch(0.78 0.12 70))",
+  "lat": 26.9124,
+  "lng": 75.7873,
+  "bestTime": "Nov – Feb",
+  "dailyBudget": 3000,
+  "tags": [
+   "Forts",
+   "Bazaars",
+   "Heritage"
+  ]
+ },
+ {
+  "id": "munnar",
+  "name": "Munnar",
+  "country": "IN",
+  "region": "Kerala",
+  "tagline": "Tea hills in the clouds",
+  "description": "Rolling emerald tea estates, misty mornings and waterfalls in the Western Ghats. Munnar is where you slow down with a cup of something freshly plucked.",
+  "image": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=70",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.1 160), oklch(0.72 0.1 130))",
+  "lat": 10.0889,
+  "lng": 77.0595,
+  "bestTime": "Sep – May",
+  "dailyBudget": 2800,
+  "tags": [
+   "Tea",
+   "Hills",
+   "Slow travel"
+  ]
+ },
+ {
+  "id": "cairo",
+  "name": "Cairo",
+  "country": "EG",
+  "region": "Cairo Governorate",
+  "tagline": "A thousand minarets",
+  "description": "Fatimid gates, Coptic churches and the roar of a megacity on the Nile. Start with Khan el-Khalili and the Egyptian Museum, end with koshari at midnight.",
+  "image": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=1200&q=70",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.07 70), oklch(0.72 0.12 60))",
+  "lat": 30.0444,
+  "lng": 31.2357,
+  "bestTime": "Oct – Apr",
+  "dailyBudget": 2200,
+  "tags": [
+   "History",
+   "Markets",
+   "City"
+  ]
+ },
+ {
+  "id": "giza",
+  "name": "Giza",
+  "country": "EG",
+  "region": "Giza Governorate",
+  "tagline": "Where the pyramids stand",
+  "description": "The last surviving wonder of the ancient world sits at the edge of the city. Come early for quiet sand and soft light on the Great Pyramid and the Sphinx.",
+  "image": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1200&q=70",
+  "gradient": "linear-gradient(150deg, oklch(0.6 0.1 70), oklch(0.8 0.12 85))",
+  "lat": 29.9792,
+  "lng": 31.1342,
+  "bestTime": "Nov – Feb",
+  "dailyBudget": 2000,
+  "tags": [
+   "Pyramids",
+   "Desert",
+   "Iconic"
+  ]
+ },
+ {
+  "id": "luxor",
+  "name": "Luxor",
+  "country": "EG",
+  "region": "Upper Egypt",
+  "tagline": "The world's greatest open-air museum",
+  "description": "Karnak's forest of columns on the east bank, royal tombs on the west, and hot-air balloons drifting over both at dawn.",
+  "image": "https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1200&q=70",
+  "gradient": "linear-gradient(150deg, oklch(0.55 0.1 50), oklch(0.75 0.13 75))",
+  "lat": 25.6872,
+  "lng": 32.6396,
+  "bestTime": "Oct – Mar",
+  "dailyBudget": 1800,
+  "tags": [
+   "Temples",
+   "Nile",
+   "Tombs"
+  ]
+ },
+ {
+  "id": "wayanad",
+  "name": "Wayanad",
+  "country": "IN",
+  "region": "Kerala",
+  "tagline": "Forested plateau of caves, peaks and waterfalls.",
+  "description": "Wayanad is a green plateau district bordering Karnataka and Tamil Nadu, known for prehistoric cave carvings, spice plantations, wildlife sanctuaries and some of Kerala's best treks.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Blue%2C_Green_%26_White.jpg/1280px-Blue%2C_Green_%26_White.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 11.6854,
+  "lng": 76.132,
+  "bestTime": "Oct – May",
+  "dailyBudget": 3000,
+  "tags": [
+   "Trekking",
+   "Cave visits",
+   "Wildlife safaris"
+  ]
+ },
+ {
+  "id": "thiruvananthapuram",
+  "name": "Thiruvananthapuram",
+  "country": "IN",
+  "region": "Kerala",
+  "tagline": "Kerala's capital — beaches, museums and the Ponmudi hills.",
+  "description": "The state capital combines colonial-era museums and temples with a coastline that stretches from Kovalam to the red cliffs of Varkala (Varkala municipality, in the north of the district). The hill station of Ponmudi is a short drive inland.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Padmanabhaswamy_Temple_Thiruvananthapuram.jpg/1280px-Padmanabhaswamy_Temple_Thiruvananthapuram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 8.5241,
+  "lng": 76.9366,
+  "bestTime": "Oct – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "Beaches",
+   "Museums",
+   "Hill drives"
+  ]
+ },
+ {
+  "id": "kochi",
+  "name": "Kochi",
+  "country": "IN",
+  "region": "Kerala",
+  "tagline": "Spice-trade port with layered colonial history.",
+  "description": "Kochi's Fort Kochi and Mattancherry neighbourhoods are a walkable mix of Chinese fishing nets, Portuguese and Dutch buildings, Jewish heritage, art cafés and some of Kerala's best food.",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Kochi_Skyline.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 9.9658,
+  "lng": 76.2421,
+  "bestTime": "Oct – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "Heritage walks",
+   "Food trails",
+   "Art galleries"
+  ]
+ },
+ {
+  "id": "alappuzha",
+  "name": "Alappuzha",
+  "country": "IN",
+  "region": "Kerala",
+  "tagline": "Houseboats drifting through palm-lined backwaters.",
+  "description": "Alappuzha (Alleppey) is the gateway to Kerala's backwaters — a web of canals, lakes and paddy fields best explored by houseboat or village canoe.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Alappuzha_Boat_Beauty_W.jpg/1280px-Alappuzha_Boat_Beauty_W.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 9.4981,
+  "lng": 76.3388,
+  "bestTime": "Oct – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "Houseboats",
+   "Canoe rides",
+   "Beach sunsets"
+  ]
+ },
+ {
+  "id": "ooty",
+  "name": "Ooty",
+  "country": "IN",
+  "region": "Tamil Nadu",
+  "tagline": "Queen of the Nilgiris — lakes, gardens and a toy train.",
+  "description": "Udhagamandalam (Ooty) is a classic colonial-era hill station in the Nilgiri hills, famous for its botanical gardens, lake and the UNESCO-listed Nilgiri Mountain Railway.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Ooty_lake.jpg/1280px-Ooty_lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 11.4102,
+  "lng": 76.695,
+  "bestTime": "Sep – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "Toy train",
+   "Gardens",
+   "Boating"
+  ]
+ },
+ {
+  "id": "kodaikanal",
+  "name": "Kodaikanal",
+  "country": "IN",
+  "region": "Tamil Nadu",
+  "tagline": "Princess of hill stations, around a star-shaped lake.",
+  "description": "Kodaikanal in the Palani hills is built around a man-made star-shaped lake, with pine forests, cliffs and walking paths.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Boating_in_Kodaikanal_Lake_with_Mist.jpg/1280px-Boating_in_Kodaikanal_Lake_with_Mist.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 10.2381,
+  "lng": 77.4892,
+  "bestTime": "Sep – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "Lake cycling",
+   "Forest walks",
+   "Viewpoints"
+  ]
+ },
+ {
+  "id": "rameswaram",
+  "name": "Rameswaram",
+  "country": "IN",
+  "region": "Tamil Nadu",
+  "tagline": "Island temple town on the edge of the Palk Strait.",
+  "description": "Rameswaram is a major pilgrimage town on Pamban Island, known for the Ramanathaswamy Temple's corridors, the Pamban bridges and the abandoned town of Dhanushkodi.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Rameswaram_Morning.jpg/1280px-Rameswaram_Morning.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 9.2876,
+  "lng": 79.3129,
+  "bestTime": "Nov – Feb",
+  "dailyBudget": 3000,
+  "tags": [
+   "Temple visits",
+   "Beach drives",
+   "History"
+  ]
+ },
+ {
+  "id": "mahabalipuram",
+  "name": "Mahabalipuram",
+  "country": "IN",
+  "region": "Tamil Nadu",
+  "tagline": "Pallava-era rock-cut monuments by the sea.",
+  "description": "Mamallapuram (Mahabalipuram) is a UNESCO World Heritage site with 7th–8th century rock-cut temples, monolithic rathas and bas-reliefs on the Coromandel coast.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Mamallapuram_view.jpg/1280px-Mamallapuram_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 12.6208,
+  "lng": 80.1945,
+  "bestTime": "Nov – Feb",
+  "dailyBudget": 3000,
+  "tags": [
+   "Heritage sites",
+   "Beach",
+   "Sculpture workshops"
+  ]
+ },
+ {
+  "id": "coorg",
+  "name": "Coorg",
+  "country": "IN",
+  "region": "Karnataka",
+  "tagline": "Coffee estates, misty hills and Kodava culture.",
+  "description": "Kodagu (Coorg) is a hilly district famous for its coffee and spice plantations, waterfalls, Tibetan settlements and distinctive Kodava cuisine.",
+  "image": "",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 12.4244,
+  "lng": 75.7382,
+  "bestTime": "Sep – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "Plantation stays",
+   "Waterfalls",
+   "Trekking"
+  ]
+ },
+ {
+  "id": "mysuru",
+  "name": "Mysuru",
+  "country": "IN",
+  "region": "Karnataka",
+  "tagline": "City of palaces, silk and sandalwood.",
+  "description": "Mysuru, the former seat of the Wodeyar dynasty, is known for the illuminated Mysore Palace, the Dasara festival, Chamundi Hill and its sweets.",
+  "image": "",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 12.2958,
+  "lng": 76.6394,
+  "bestTime": "Oct – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "Palaces",
+   "Markets",
+   "Gardens"
+  ]
+ },
+ {
+  "id": "hampi",
+  "name": "Hampi",
+  "country": "IN",
+  "region": "Karnataka",
+  "tagline": "Boulder-strewn ruins of the Vijayanagara empire.",
+  "description": "Hampi is a UNESCO World Heritage site spread across a surreal boulder landscape on the Tungabhadra river, with temples, bazaars and royal enclosures from the 14th–16th centuries.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg/1280px-Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 15.335,
+  "lng": 76.46,
+  "bestTime": "Oct – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "Ruins",
+   "Cycling",
+   "Bouldering"
+  ]
+ },
+ {
+  "id": "chikmagalur",
+  "name": "Chikmagalur",
+  "country": "IN",
+  "region": "Karnataka",
+  "tagline": "Birthplace of Indian coffee and Karnataka's highest peak.",
+  "description": "Chikkamagaluru is coffee country in the Baba Budangiri range, home to Mullayanagiri — Karnataka's highest peak — and many waterfalls.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Chikmagalur%2C_India._%287793316622%29.jpg/1280px-Chikmagalur%2C_India._%287793316622%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 13.3153,
+  "lng": 75.7754,
+  "bestTime": "Sep – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "Trekking",
+   "Coffee tours",
+   "Waterfalls"
+  ]
+ },
+ {
+  "id": "goa",
+  "name": "Goa",
+  "country": "IN",
+  "region": "Goa",
+  "tagline": "Sun, sand and Indo-Portuguese heritage.",
+  "description": "India's smallest state is known for its beaches, whitewashed churches, spice farms, laid-back villages and fiery seafood curries.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/BeachFun.jpg/1280px-BeachFun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 15.4909,
+  "lng": 73.8278,
+  "bestTime": "Oct – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "Beaches",
+   "Water sports",
+   "Heritage churches"
+  ]
+ },
+ {
+  "id": "manali",
+  "name": "Manali",
+  "country": "IN",
+  "region": "Himachal Pradesh",
+  "tagline": "Gateway to the high Himalaya.",
+  "description": "Manali sits at the head of the Kullu valley on the Beas river — a base for snow trips, adventure sports and road journeys towards Lahaul and Ladakh.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Manali_City.jpg/1280px-Manali_City.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 32.2432,
+  "lng": 77.1892,
+  "bestTime": "Mar – Oct",
+  "dailyBudget": 3000,
+  "tags": [
+   "Paragliding",
+   "Snow activities",
+   "Trekking"
+  ]
+ },
+ {
+  "id": "ladakh",
+  "name": "Leh-Ladakh",
+  "country": "IN",
+  "region": "Ladakh",
+  "tagline": "High-altitude lakes, passes and monasteries.",
+  "description": "Leh is the base for exploring Ladakh's Buddhist monasteries, high passes and lakes like Pangong Tso. Allow time to acclimatise to the altitude (about 3,500 m).",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Leh_City_seen_from_Shanti_Stupa.JPG/1280px-Leh_City_seen_from_Shanti_Stupa.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 34.1526,
+  "lng": 77.5771,
+  "bestTime": "Mar – Oct",
+  "dailyBudget": 3000,
+  "tags": [
+   "Road trips",
+   "Monasteries",
+   "Camping"
+  ]
+ },
+ {
+  "id": "rishikesh",
+  "name": "Rishikesh",
+  "country": "IN",
+  "region": "Uttarakhand",
+  "tagline": "Yoga capital on the Ganga.",
+  "description": "Rishikesh is a spiritual town in the Himalayan foothills, known for its suspension bridges, ashrams, the evening Ganga aarti and white-water rafting.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Trayambakeshwar_Temple_VK.jpg/1280px-Trayambakeshwar_Temple_VK.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 30.0869,
+  "lng": 78.2676,
+  "bestTime": "Mar – Oct",
+  "dailyBudget": 3000,
+  "tags": [
+   "Rafting",
+   "Yoga",
+   "Ganga aarti"
+  ]
+ },
+ {
+  "id": "lonavala",
+  "name": "Lonavala",
+  "country": "IN",
+  "region": "Maharashtra",
+  "tagline": "Monsoon getaway in the Sahyadri hills.",
+  "description": "Lonavala and Khandala are hill towns between Mumbai and Pune, loved for monsoon waterfalls, forts and caves.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Tiger_Valley_Bridge_view_3.jpg/1280px-Tiger_Valley_Bridge_view_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 18.7546,
+  "lng": 73.4062,
+  "bestTime": "Jun – Feb",
+  "dailyBudget": 3000,
+  "tags": [
+   "Waterfalls",
+   "Fort treks",
+   "Caves"
+  ]
+ },
+ {
+  "id": "kutch",
+  "name": "Kutch",
+  "country": "IN",
+  "region": "Gujarat",
+  "tagline": "The white salt desert and living crafts.",
+  "description": "The Great Rann of Kutch is a vast seasonal salt marsh that turns into a white desert in winter, surrounded by craft villages.",
+  "image": "",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 23.7337,
+  "lng": 69.8597,
+  "bestTime": "Oct – Mar",
+  "dailyBudget": 3000,
+  "tags": [
+   "White desert",
+   "Craft villages",
+   "Full-moon nights"
+  ]
+ },
+ {
+  "id": "darjeeling",
+  "name": "Darjeeling",
+  "country": "IN",
+  "region": "West Bengal",
+  "tagline": "Tea gardens facing Kanchenjunga.",
+  "description": "Darjeeling is a Himalayan hill town known for its tea, the Darjeeling Himalayan Railway and views of Kanchenjunga.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/DarjeelingTrainFruitshop_%282%29.jpg/1280px-DarjeelingTrainFruitshop_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
+  "lat": 27.041,
+  "lng": 88.2663,
+  "bestTime": "Mar – Oct",
+  "dailyBudget": 3000,
+  "tags": [
+   "Toy train",
+   "Tea tasting",
+   "Sunrise views"
+  ]
+ },
+ {
+  "id": "kyoto",
+  "name": "Kyoto",
+  "country": "JP",
+  "region": "Kyoto",
+  "tagline": "Temples, shrines and seasonal gardens.",
+  "description": "Kyoto was Japan's capital for over a thousand years and keeps hundreds of temples, shrines, traditional streets and gardens.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Kyoto%2C_Japan_%2849667780482%29.jpg/1280px-Kyoto%2C_Japan_%2849667780482%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.55 0.1 10), oklch(0.8 0.08 80))",
+  "lat": 35.0116,
+  "lng": 135.7681,
+  "bestTime": "Mar – Nov",
+  "dailyBudget": 15000,
+  "tags": [
+   "Temples",
+   "Tea ceremony",
+   "Gardens"
+  ]
+ },
+ {
+  "id": "ubud",
+  "name": "Ubud",
+  "country": "ID",
+  "region": "Bali",
+  "tagline": "Bali's cultural heart among rice terraces.",
+  "description": "Ubud is a town in Bali's uplands known for rice terraces, temples, crafts, yoga and traditional dance.",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Ubud_%2849818456887%29.jpg/1280px-Ubud_%2849818456887%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "gradient": "linear-gradient(150deg, oklch(0.5 0.1 150), oklch(0.75 0.12 90))",
+  "lat": -8.5069,
+  "lng": 115.2625,
+  "bestTime": "Apr – Oct",
+  "dailyBudget": 800000,
+  "tags": [
+   "Rice terraces",
+   "Temples",
+   "Yoga"
+  ]
+ }
+]

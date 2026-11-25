@@ -1,0 +1,32 @@
+[
+ {
+  "id": "heritage",
+  "label": "Heritage",
+  "emoji": "🏛️"
+ },
+ {
+  "id": "nature",
+  "label": "Nature",
+  "emoji": "🌿"
+ },
+ {
+  "id": "food",
+  "label": "Food",
+  "emoji": "🍛"
+ },
+ {
+  "id": "market",
+  "label": "Markets",
+  "emoji": "🧺"
+ },
+ {
+  "id": "spiritual",
+  "label": "Spiritual",
+  "emoji": "🕯️"
+ },
+ {
+  "id": "experience",
+  "label": "Experiences",
+  "emoji": "✨"
+ }
+]

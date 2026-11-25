@@ -1,0 +1,38 @@
+[
+ {
+  "code": "IN",
+  "name": "India",
+  "flag": "🇮🇳",
+  "currency": "INR",
+  "symbol": "₹",
+  "language": "Hindi",
+  "blurb": "Palaces, tea hills, spice markets and a thousand festivals."
+ },
+ {
+  "code": "JP",
+  "name": "Japan",
+  "flag": "🇯🇵",
+  "currency": "JPY",
+  "symbol": "¥",
+  "language": "Japanese",
+  "blurb": "Temples, gardens and seasonal beauty."
+ },
+ {
+  "code": "ID",
+  "name": "Indonesia",
+  "flag": "🇮🇩",
+  "currency": "IDR",
+  "symbol": "Rp",
+  "language": "Indonesian",
+  "blurb": "Volcanoes, rice terraces and island life."
+ },
+ {
+  "code": "EG",
+  "name": "Egypt",
+  "flag": "🇪🇬",
+  "currency": "EGP",
+  "symbol": "E£",
+  "language": "Arabic",
+  "blurb": "A starter guide to the Nile, the pyramids and old Cairo."
+ }
+]

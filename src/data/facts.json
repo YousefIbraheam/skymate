@@ -1,0 +1,260 @@
+{
+ "munnar": {
+  "climate": "Cool year-round; roughly 10–25 °C. Heavy south-west monsoon June–August.",
+  "duration": "2–3 days",
+  "activities": [
+   "Tea estate walks",
+   "Trekking",
+   "Boating",
+   "Wildlife spotting",
+   "Photography"
+  ],
+  "summary": "Cool, clear days from September to March make it ideal for sightseeing and treks."
+ },
+ "wayanad": {
+  "climate": "Mild; roughly 18–29 °C. Very wet June–September.",
+  "duration": "2–3 days",
+  "activities": [
+   "Trekking",
+   "Cave visits",
+   "Wildlife safaris",
+   "Plantation stays"
+  ],
+  "summary": "October to May is dry and pleasant; the monsoon makes trails slippery and some sites close."
+ },
+ "thiruvananthapuram": {
+  "climate": "Tropical; roughly 23–33 °C. Two monsoons (June–Sept and Oct–Nov).",
+  "duration": "3–4 days",
+  "activities": [
+   "Beaches",
+   "Museums",
+   "Hill drives",
+   "Ayurveda"
+  ],
+  "summary": "October to March brings calmer seas, lower humidity and the best beach weather."
+ },
+ "kochi": {
+  "climate": "Tropical and humid; roughly 23–32 °C.",
+  "duration": "2 days",
+  "activities": [
+   "Heritage walks",
+   "Food trails",
+   "Art galleries",
+   "Harbour cruises"
+  ],
+  "summary": "October to March brings calmer seas, lower humidity and the best beach weather."
+ },
+ "alappuzha": {
+  "climate": "Tropical; roughly 24–33 °C.",
+  "duration": "1–2 days",
+  "activities": [
+   "Houseboats",
+   "Canoe rides",
+   "Beach sunsets",
+   "Village walks"
+  ],
+  "summary": "November to February is ideal for houseboats; August hosts the famous snake boat races."
+ },
+ "ooty": {
+  "climate": "Cool; roughly 5–22 °C, frost possible in winter.",
+  "duration": "2–3 days",
+  "activities": [
+   "Toy train",
+   "Gardens",
+   "Boating",
+   "Tea factories"
+  ],
+  "summary": "April–June is peak summer season; October–February is cooler and quieter."
+ },
+ "kodaikanal": {
+  "climate": "Cool; roughly 8–20 °C.",
+  "duration": "2 days",
+  "activities": [
+   "Lake cycling",
+   "Forest walks",
+   "Viewpoints"
+  ],
+  "summary": "Cool, clear days from September to March make it ideal for sightseeing and treks."
+ },
+ "rameswaram": {
+  "climate": "Hot and humid; roughly 25–35 °C.",
+  "duration": "1–2 days",
+  "activities": [
+   "Temple visits",
+   "Beach drives",
+   "History"
+  ],
+  "summary": ""
+ },
+ "mahabalipuram": {
+  "climate": "Warm coastal; roughly 24–35 °C.",
+  "duration": "1 day",
+  "activities": [
+   "Heritage sites",
+   "Beach",
+   "Sculpture workshops"
+  ],
+  "summary": ""
+ },
+ "coorg": {
+  "climate": "Mild; roughly 15–28 °C. Very wet monsoon.",
+  "duration": "2–3 days",
+  "activities": [
+   "Plantation stays",
+   "Waterfalls",
+   "Trekking",
+   "River rafting"
+  ],
+  "summary": "Cool, clear days from September to March make it ideal for sightseeing and treks."
+ },
+ "mysuru": {
+  "climate": "Moderate; roughly 18–33 °C.",
+  "duration": "1–2 days",
+  "activities": [
+   "Palaces",
+   "Markets",
+   "Gardens",
+   "Festivals"
+  ],
+  "summary": "October to March is pleasant; the Dasara festival usually falls in September–October."
+ },
+ "hampi": {
+  "climate": "Hot and dry; summer above 38 °C.",
+  "duration": "2 days",
+  "activities": [
+   "Ruins",
+   "Cycling",
+   "Bouldering",
+   "Coracle rides"
+  ],
+  "summary": "October to February is best; summer temperatures among the boulders are extreme."
+ },
+ "chikmagalur": {
+  "climate": "Mild; roughly 14–28 °C.",
+  "duration": "2 days",
+  "activities": [
+   "Trekking",
+   "Coffee tours",
+   "Waterfalls"
+  ],
+  "summary": "Cool, clear days from September to March make it ideal for sightseeing and treks."
+ },
+ "goa": {
+  "climate": "Tropical; roughly 22–33 °C.",
+  "duration": "3–5 days",
+  "activities": [
+   "Beaches",
+   "Water sports",
+   "Heritage churches",
+   "Nightlife"
+  ],
+  "summary": "November to February is peak beach season; the monsoon (June–September) is lush but many shacks close."
+ },
+ "manali": {
+  "climate": "Cold winters (below 0 °C), mild summers.",
+  "duration": "3–4 days",
+  "activities": [
+   "Paragliding",
+   "Snow activities",
+   "Trekking",
+   "Cafés"
+  ],
+  "summary": "March–June for pleasant weather and adventure; December–February for snow."
+ },
+ "jaipur": {
+  "climate": "Semi-arid; summers above 40 °C.",
+  "duration": "2–3 days",
+  "activities": [
+   "Forts",
+   "Shopping",
+   "Food walks",
+   "Photography"
+  ],
+  "summary": "October to March offers mild days — perfect for forts, palaces and markets."
+ },
+ "udaipur": {
+  "climate": "Semi-arid; milder than western Rajasthan.",
+  "duration": "2–3 days",
+  "activities": [
+   "Boat rides",
+   "Palaces",
+   "Sunsets",
+   "Cultural shows"
+  ],
+  "summary": "October to March offers mild days — perfect for forts, palaces and markets."
+ },
+ "ladakh": {
+  "climate": "Cold desert; summer days 15–25 °C, winters far below 0 °C.",
+  "duration": "6–8 days",
+  "activities": [
+   "Road trips",
+   "Monasteries",
+   "Camping",
+   "Trekking"
+  ],
+  "summary": "May to September, when roads are open. Winters are extremely cold."
+ },
+ "rishikesh": {
+  "climate": "Sub-tropical; hot summers, cool winters.",
+  "duration": "2–3 days",
+  "activities": [
+   "Rafting",
+   "Yoga",
+   "Ganga aarti",
+   "Cafés"
+  ],
+  "summary": "September–November and February–May; rafting usually pauses during the monsoon."
+ },
+ "lonavala": {
+  "climate": "Mild; heavy monsoon rain.",
+  "duration": "1–2 days",
+  "activities": [
+   "Waterfalls",
+   "Fort treks",
+   "Caves"
+  ],
+  "summary": "June to September is the green, waterfall season; October–February is pleasant and dry."
+ },
+ "kutch": {
+  "climate": "Arid; very hot summers.",
+  "duration": "2–3 days",
+  "activities": [
+   "White desert",
+   "Craft villages",
+   "Full-moon nights"
+  ],
+  "summary": "November to February, when the Rann is dry and the Rann Utsav festival is usually held."
+ },
+ "darjeeling": {
+  "climate": "Cool; roughly 2–20 °C.",
+  "duration": "2–3 days",
+  "activities": [
+   "Toy train",
+   "Tea tasting",
+   "Sunrise views"
+  ],
+  "summary": "March–May and October–December for clear views of the Himalaya."
+ },
+ "kyoto": {
+  "climate": "Humid subtropical; hot summers, cold winters.",
+  "duration": "3–4 days",
+  "activities": [
+   "Temples",
+   "Tea ceremony",
+   "Gardens",
+   "Food markets"
+  ],
+  "summary": "Cherry blossoms in spring and autumn foliage in November; summers are hot and humid."
+ },
+ "ubud": {
+  "climate": "Tropical; roughly 23–31 °C.",
+  "duration": "3 days",
+  "activities": [
+   "Rice terraces",
+   "Temples",
+   "Yoga",
+   "Crafts"
+  ],
+  "summary": "April to October is the dry season; November to March brings heavy tropical showers."
+ }
+}
