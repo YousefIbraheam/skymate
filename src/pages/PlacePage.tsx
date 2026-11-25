@@ -17,8 +17,10 @@ export function PlacePage() {
   const visit = useAppState((s) => s.visits[id]);
   const saved = useAppState((s) => s.saved.includes(id));
   const savedNote = useAppState((s) => s.notes[id] ?? "");
-  const reviews = useAppState((s) => s.reviews[id] ?? []);
-  const memories = useAppState((s) => s.journal.filter((j) => j.placeId === id));
+  const allReviews = useAppState((s) => s.reviews[id]);
+  const reviews = allReviews ?? [];
+  const journal = useAppState((s) => s.journal);
+  const memories = journal.filter((j) => j.placeId === id);
   const [note, setNote] = useState(savedNote);
   const [reviewText, setReviewText] = useState("");
   const [reviewRating, setReviewRating] = useState(5);
