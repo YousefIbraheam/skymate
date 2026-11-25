@@ -12,7 +12,7 @@ import { Card, EmptyState } from "../components/ui/Section";
 
 export function PlacePage() {
   const { id = "" } = useParams();
-  const { m } = useI18n();
+  const { m, lang } = useI18n();
   const place = getPlace(id);
   const visit = useAppState((s) => s.visits[id]);
   const saved = useAppState((s) => s.saved.includes(id));
@@ -54,7 +54,7 @@ export function PlacePage() {
           <p className="text-muted-foreground">{place.description}</p>
           <div className="grid grid-cols-3 gap-2 text-center text-sm">
             <div className="rounded-2xl bg-card p-3 shadow-soft"><Star className="mx-auto mb-1 h-4 w-4 fill-sun text-sun" />{place.rating.toFixed(1)}</div>
-            <div className="rounded-2xl bg-card p-3 shadow-soft"><Clock className="mx-auto mb-1 h-4 w-4 text-teal" />{place.hours} h</div>
+            <div className="rounded-2xl bg-card p-3 shadow-soft"><Clock className="mx-auto mb-1 h-4 w-4 text-teal" />{lang === "ar" ? `${place.hours} س` : `${place.hours} h`}</div>
             <div className="rounded-2xl bg-card p-3 shadow-soft"><Wallet className="mx-auto mb-1 h-4 w-4 text-teal" />{formatMoney(place.cost, place.destinationId)}</div>
           </div>
           <p className="text-xs text-muted-foreground">{m.common.indicative}</p>
