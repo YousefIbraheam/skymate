@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useMemo, type ReactNode } from "r
 import { actions, useAppState, type Lang } from "../store/appStore";
 import { en, type Messages } from "./en";
 import { ar } from "./ar";
+import { setDataLang } from "../data/localize";
 
 const dictionaries: Record<Lang, Messages> = { en, ar };
 
@@ -27,6 +28,7 @@ const fill: I18nValue["fill"] = (template, vars) =>
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const lang = useAppState((s) => s.lang);
+  setDataLang(lang); // before children render, so mock data reads in the right language
   const dir = languages.find((l) => l.code === lang)?.dir ?? "ltr";
 
   // Keep <html lang dir> in sync so layout mirrors for Arabic.
