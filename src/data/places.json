@@ -322,20 +322,6 @@
     "tip": "Boating slots fill up on weekends"
   },
   {
-    "id": "munnar.tea-museum",
-    "destinationId": "munnar",
-    "name": "Tea Museum",
-    "category": "experience",
-    "description": "A museum run by a tea company at the Nallathanni estate that explains how Munnar's tea industry began, with old machinery, photographs and a live processing demonstration.",
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Munnar_Overview.jpg/1280px-Munnar_Overview.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "lat": 10.095,
-    "lng": 77.06,
-    "rating": 4.6,
-    "hours": 1,
-    "cost": 200,
-    "tip": "Watch the processing film first"
-  },
-  {
     "id": "munnar.kundala-lake",
     "destinationId": "munnar",
     "name": "Kundala Lake",
@@ -1034,20 +1020,6 @@
     "hours": 1,
     "cost": 0,
     "tip": "Check local timings before you go."
-  },
-  {
-    "id": "udaipur.monsoon-palace",
-    "destinationId": "udaipur",
-    "name": "Sajjangarh (Monsoon Palace)",
-    "category": "heritage",
-    "description": "A hilltop palace with sweeping sunset views over the lakes and Aravallis.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Monsoon_Palace.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "lat": 24.596,
-    "lng": 73.643,
-    "rating": 4.2,
-    "hours": 2,
-    "cost": 200,
-    "tip": "Reached by road through a wildlife sanctuary; shared vehicles available."
   },
   {
     "id": "udaipur.lakeside-dining",
