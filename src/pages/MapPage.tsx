@@ -4,16 +4,14 @@ import { useI18n } from "../i18n";
 import { Select } from "../components/ui/fields";
 import { Card, PageTitle } from "../components/ui/Section";
 
-/** Embedded OpenStreetMap view for a destination plus a list of its places. */
+/** Embedded Google Maps view for a destination plus a list of its places, each opening pinned in Google Maps. */
 export function MapPage() {
   const { m } = useI18n();
   const [params, setParams] = useSearchParams();
   const destination = getDestination(params.get("destination") ?? "") ?? destinations[0];
   const list = placesOf(destination.id);
 
-  const pad = 0.08;
-  const bbox = [destination.lng - pad, destination.lat - pad, destination.lng + pad, destination.lat + pad].join("%2C");
-  const embed = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${destination.lat}%2C${destination.lng}`;
+  const embed = `https://maps.google.com/maps?q=${destination.lat},${destination.lng}&z=12&output=embed`;
 
   return (
     <div>
@@ -30,7 +28,7 @@ export function MapPage() {
               <li key={p.id}>
                 <a
                   className="block rounded-2xl bg-muted p-3 text-sm hover:bg-accent"
-                  href={`https://www.openstreetmap.org/?mlat=${p.lat}&mlon=${p.lng}#map=16/${p.lat}/${p.lng}`}
+                  href={`https://www.google.com/maps/search/?api=1&query=${p.lat}%2C${p.lng}`}
                   target="_blank"
                   rel="noreferrer"
                 >
