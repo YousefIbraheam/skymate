@@ -31,6 +31,9 @@ export const wiki = localizedRecord(wikiJson as Record<string, string>, arWiki a
 export const facts = localizedRecord(factsJson as Record<string, DestinationFacts>, arFacts as Record<string, DestinationFacts>);
 
 export const getCountry = (code: string) => countries.find((c) => c.code === code);
+
+/** English + Arabic text of an item's localized fields, lowercased, so search matches either language. */
+export const searchText = (item: object) => (item as { searchText?: string }).searchText ?? "";
 export const getDestination = (id: string) => destinations.find((d) => d.id === id);
 export const getPlace = (id: string) => places.find((p) => p.id === id);
 export const placesOf = (destinationId: string) => places.filter((p) => p.destinationId === destinationId);
