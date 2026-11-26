@@ -39,6 +39,15 @@ export function localized<T extends object>(item: T, row: Row | undefined, field
       get: () => (current === "ar" && row && row[field as string] !== undefined && row[field as string] !== "" ? row[field as string] : english),
     });
   }
+  // English + Arabic values of every localized field, so search matches in both languages.
+  const parts: string[] = [];
+  for (const field of fields) {
+    for (const value of [item[field], row?.[field as string]]) {
+      if (typeof value === "string") parts.push(value);
+      else if (Array.isArray(value)) parts.push(...value.filter((v): v is string => typeof v === "string"));
+    }
+  }
+  Object.defineProperty(copy, "searchText", { enumerable: false, get: () => parts.join("\n").toLowerCase() });
   return copy;
 }
 
