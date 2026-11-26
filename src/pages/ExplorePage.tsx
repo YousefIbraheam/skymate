@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Search } from "lucide-react";
-import { categories, countries, destinations, dishes, getCountry, getDestination, places } from "../data";
+import { categories, countries, destinations, dishes, getCountry, getDestination, places, searchText } from "../data";
 import { useI18n } from "../i18n";
 import { Button } from "../components/ui/Button";
 import { Input, Select } from "../components/ui/fields";
@@ -45,7 +45,7 @@ export function ExplorePage() {
     (d) =>
       (!country || d.country === country) &&
       (!region || d.region === region) &&
-      (!q || [d.name, d.region, d.tagline, ...d.tags].some((s) => s.toLowerCase().includes(q))),
+      (!q || [d.name, d.region, d.tagline, ...d.tags, searchText(d)].some((s) => s.toLowerCase().includes(q))),
   );
   const filteredPlaces = places
     .filter((p) => {
@@ -54,13 +54,13 @@ export function ExplorePage() {
         (!category || p.category === category) &&
         (!country || d?.country === country) &&
         (!region || d?.region === region) &&
-        (!q || [p.name, p.description, p.category, d?.name ?? ""].some((s) => s.toLowerCase().includes(q)))
+        (!q || [p.name, p.description, p.category, d?.name ?? "", searchText(p), ...(d ? [searchText(d)] : [])].some((s) => s.toLowerCase().includes(q)))
       );
     })
     .sort((a, b) => (sort === "rating" ? b.rating - a.rating : sort === "cost" ? a.cost - b.cost : a.name.localeCompare(b.name)))
     .slice(0, 30);
   const filteredDishes = q
-    ? dishes.filter((d) => [d.name, d.description, d.where].some((s) => s.toLowerCase().includes(q))).slice(0, 4)
+    ? dishes.filter((d) => [d.name, d.description, d.where, searchText(d)].some((s) => s.toLowerCase().includes(q))).slice(0, 4)
     : [];
   const hasFilters = Boolean(query || category || country || region);
 
