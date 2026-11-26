@@ -39,6 +39,12 @@ export const countryOfDestination = (destinationId: string) =>
   getCountry(getDestination(destinationId)?.country ?? "") ?? countries[0];
 
 /** All prices in the mock data are US dollars. */
+/** Cost label for a place: free entry says Free, eateries without a set price say it varies. */
+export function placeCost(place: { cost: number; category: string; destinationId?: string }) {
+  if (place.cost === 0 && place.category === "food") return getDataLang() === "ar" ? "حسب الطلب" : "Varies";
+  return formatMoney(place.cost, place.destinationId);
+}
+
 export function formatMoney(amount: number, _destinationId?: string) {
   if (amount === 0) return getDataLang() === "ar" ? "مجاني" : "Free";
   return `$${Math.round(amount).toLocaleString("en-US")}`;
