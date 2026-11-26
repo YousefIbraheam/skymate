@@ -59,7 +59,7 @@ export const en = {
     estimate: "Estimated cost", total: "Per person", nights: "{n} days", noPlaces: "No places yet.", remove: "Remove", notFound: "Trip not found.",
   },
   map: {
-    title: "Map", choose: "Choose a destination", openIn: "Open in maps", placesHere: "Places here", lat: "Lat", lng: "Lng",
+    title: "Map", choose: "Choose a destination", openIn: "Open in Google Maps", placesHere: "Places here", lat: "Lat", lng: "Lng",
   },
   travels: {
     title: "My Travels", subtitle: "Your visited places and journal.", journal: "Journal", add: "Add memory", caption: "What do you remember?",
