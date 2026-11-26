@@ -26,7 +26,7 @@ export function TripDetailPage() {
 
       <Card>
         <p className="text-sm text-muted-foreground">{m.trips.estimate} ({m.common.perPerson})</p>
-        <p className="font-display text-4xl font-semibold text-primary">{formatMoney(total, trip.destinationId)}</p>
+        <p className="font-display text-4xl font-semibold text-primary">{total === 0 ? "$0" : formatMoney(total, trip.destinationId)}</p>
         <p className="text-xs text-muted-foreground">{m.common.indicative}</p>
       </Card>
 
