@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Bookmark, MapPin, Star } from "lucide-react";
 import type { Destination, Place } from "../../data/types";
-import { categories, formatMoney } from "../../data";
+import { categories, placeCost } from "../../data";
 import { actions, useAppState } from "../../store/appStore";
 import { Photo } from "./Photo";
 import { cn } from "../../lib/cn";
@@ -42,7 +42,7 @@ export function PlaceCard({ place }: { place: Place }) {
           </div>
           <h3 className="mt-1 line-clamp-1 font-semibold">{place.name}</h3>
           <p className="line-clamp-2 text-sm text-muted-foreground">{place.description}</p>
-          <p className="mt-2 text-xs font-semibold text-teal">{formatMoney(place.cost, place.destinationId)}</p>
+          <p className="mt-2 text-xs font-semibold text-teal">{placeCost(place)}</p>
         </div>
       </Link>
       <button
