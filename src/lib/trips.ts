@@ -1,4 +1,4 @@
-import { getDestination, getPlace } from "../data";
+import { getPlace } from "../data";
 import type { Trip } from "../store/appStore";
 
 const DAY_MS = 86_400_000;
@@ -9,9 +9,7 @@ export function tripDays(trip: Pick<Trip, "startDate" | "endDate">) {
   return Number.isFinite(days) && days > 0 ? days : 1;
 }
 
-/** Estimated cost per person: daily budget for each day plus entry costs of planned places. */
+/** Estimated cost per person: entry costs of the places planned in the trip. Removing a place lowers it. */
 export function tripCostPerPerson(trip: Trip) {
-  const destination = getDestination(trip.destinationId);
-  const entries = trip.days.flat().reduce((sum, id) => sum + (getPlace(id)?.cost ?? 0), 0);
-  return (destination?.dailyBudget ?? 0) * tripDays(trip) + entries;
+  return trip.days.flat().reduce((sum, id) => sum + (getPlace(id)?.cost ?? 0), 0);
 }
