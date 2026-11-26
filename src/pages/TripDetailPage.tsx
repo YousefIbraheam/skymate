@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Trash2 } from "lucide-react";
-import { formatMoney, getDestination, getPlace, placesOf } from "../data";
+import { formatMoney, placeCost, getDestination, getPlace, placesOf } from "../data";
 import { actions, useAppState } from "../store/appStore";
 import { useI18n } from "../i18n";
 import { Select } from "../components/ui/fields";
@@ -41,7 +41,7 @@ export function TripDetailPage() {
                 <li key={placeId} className="flex items-center justify-between rounded-2xl bg-muted p-3">
                   <span className="font-semibold">{place?.name}</span>
                   <span className="flex items-center gap-3 text-sm text-muted-foreground">
-                    {place && formatMoney(place.cost, place.destinationId)}
+                    {place && placeCost(place)}
                     <button type="button" aria-label={m.trips.remove} onClick={() => setDay(index, day.filter((p) => p !== placeId))}>
                       <Trash2 className="h-4 w-4" />
                     </button>

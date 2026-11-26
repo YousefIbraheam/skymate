@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Bookmark, Clock, Info, Star, Trash2, Wallet } from "lucide-react";
-import { categories, formatMoney, getDestination, getPlace } from "../data";
+import { categories, placeCost, getDestination, getPlace } from "../data";
 import { actions, useAppState } from "../store/appStore";
 import { useI18n } from "../i18n";
 import { Button } from "../components/ui/Button";
@@ -55,7 +55,7 @@ export function PlacePage() {
           <div className="grid grid-cols-3 gap-2 text-center text-sm">
             <div className="rounded-2xl bg-card p-3 shadow-soft"><Star className="mx-auto mb-1 h-4 w-4 fill-sun text-sun" />{place.rating.toFixed(1)}</div>
             <div className="rounded-2xl bg-card p-3 shadow-soft"><Clock className="mx-auto mb-1 h-4 w-4 text-teal" />{lang === "ar" ? `${place.hours} س` : `${place.hours} h`}</div>
-            <div className="rounded-2xl bg-card p-3 shadow-soft"><Wallet className="mx-auto mb-1 h-4 w-4 text-teal" />{formatMoney(place.cost, place.destinationId)}</div>
+            <div className="rounded-2xl bg-card p-3 shadow-soft"><Wallet className="mx-auto mb-1 h-4 w-4 text-teal" />{placeCost(place)}</div>
           </div>
           <p className="text-xs text-muted-foreground">{m.common.indicative}</p>
           <p className="flex gap-2 rounded-2xl bg-accent p-4 text-sm text-accent-foreground"><Info className="h-4 w-4 shrink-0" /> {place.tip}</p>

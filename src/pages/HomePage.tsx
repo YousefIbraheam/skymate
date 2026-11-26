@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Compass, Image, Languages, Map, Plane, UtensilsCrossed } from "lucide-react";
-import { destinations, formatMoney, getDestination, places } from "../data";
+import { destinations, placeCost, getDestination, places } from "../data";
 import { useAppState } from "../store/appStore";
 import { useI18n } from "../i18n";
 import { Button } from "../components/ui/Button";
@@ -126,7 +126,7 @@ export function HomePage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {suggestions.map((place) => <PlaceCard key={place.id} place={place} />)}
         </div>
-        {suggestions[0] && <p className="mt-3 text-xs text-muted-foreground">{formatMoney(suggestions[0].cost, suggestions[0].destinationId)} · {m.common.indicative}</p>}
+        {suggestions[0] && <p className="mt-3 text-xs text-muted-foreground">{placeCost(suggestions[0])} · {m.common.indicative}</p>}
       </section>
 
       <section>
