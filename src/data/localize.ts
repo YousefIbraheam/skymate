@@ -12,6 +12,7 @@ import arPlaces2 from "./ar/places2.json";
 import arPlaces3 from "./ar/places3.json";
 
 let current: Lang = "en";
+export const getDataLang = () => current;
 export const setDataLang = (lang: Lang) => {
   current = lang;
 };

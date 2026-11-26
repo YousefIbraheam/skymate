@@ -7,7 +7,7 @@ import foodJson from "./food.json";
 import bestMonthsJson from "./bestMonths.json";
 import wikiJson from "./wiki.json";
 import factsJson from "./facts.json";
-import { arFacts, arWiki, localizeCategories, localizeCountries, localizeList, localizedRecord } from "./localize";
+import { getDataLang, arFacts, arWiki, localizeCategories, localizeCountries, localizeList, localizedRecord } from "./localize";
 
 const RATE_TO_USD: Record<string, number> = { INR: 0.012, JPY: 0.0067, IDR: 0.000062, EGP: 0.02 };
 const toUsd = (amount: number, countryCode: string) => {
@@ -40,5 +40,6 @@ export const countryOfDestination = (destinationId: string) =>
 
 /** All prices in the mock data are US dollars. */
 export function formatMoney(amount: number, _destinationId?: string) {
+  if (amount === 0) return getDataLang() === "ar" ? "مجاني" : "Free";
   return `$${Math.round(amount).toLocaleString("en-US")}`;
 }
