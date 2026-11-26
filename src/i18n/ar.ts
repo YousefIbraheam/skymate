@@ -61,7 +61,7 @@ export const ar: Messages = {
     estimate: "التكلفة التقديرية", total: "للشخص", nights: "{n} أيام", noPlaces: "لا توجد أماكن بعد.", remove: "إزالة", notFound: "الرحلة غير موجودة.",
   },
   map: {
-    title: "الخريطة", choose: "اختر وجهة", openIn: "افتح في الخرائط", placesHere: "الأماكن هنا", lat: "خط العرض", lng: "خط الطول",
+    title: "الخريطة", choose: "اختر وجهة", openIn: "افتح في خرائط جوجل", placesHere: "الأماكن هنا", lat: "خط العرض", lng: "خط الطول",
   },
   travels: {
     title: "رحلاتي", subtitle: "الأماكن التي زرتها ويومياتك.", journal: "اليوميات", add: "إضافة ذكرى", caption: "ماذا تتذكر؟",
