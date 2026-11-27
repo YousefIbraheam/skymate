@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ScanLine, Star, Trash2, Volume2 } from "lucide-react";
 import { phraseLanguages } from "../data/phrases";
 import { translate } from "../api/client";
+import { ScanCamera } from "../components/ScanCamera";
 import { actions, useAppState } from "../store/appStore";
 import { useI18n } from "../i18n";
 import { Flag } from "../components/ui/Flag";
@@ -23,7 +24,7 @@ export function TranslatorPage() {
   const langName = (code: string, fallback: string) =>
     lang === "ar" ? new Intl.DisplayNames(["ar"], { type: "language" }).of(code) ?? fallback : fallback;
   const [code, setCode] = useState(phraseLanguages[0].code);
-  const [scanNote, setScanNote] = useState(false);
+  const [scanOpen, setScanOpen] = useState(false);
   const [text, setText] = useState("");
   const [result, setResult] = useState("");
   const history = useAppState((s) => s.translatorHistory);
@@ -108,14 +109,16 @@ export function TranslatorPage() {
       </Card>
 
       <Card>
-        <button
-          type="button"
-          onClick={() => setScanNote(true)}
-          dir="ltr" className="mb-3 inline-flex h-10 items-center gap-2 rounded-full bg-ocean px-4 text-sm font-semibold text-white shadow-soft transition-opacity hover:opacity-90"
-        >
-          <ScanLine className="h-4 w-4" aria-hidden /> {m.translator.scan}
-        </button>
-        {scanNote && <p role="status" className="mb-3 text-sm text-muted-foreground">{m.translator.scanSoon}</p>}
+        {!scanOpen && (
+          <button
+            type="button"
+            onClick={() => setScanOpen(true)}
+            dir="ltr" className="mb-3 inline-flex h-10 items-center gap-2 rounded-full bg-ocean px-4 text-sm font-semibold text-white shadow-soft transition-opacity hover:opacity-90"
+          >
+            <ScanLine className="h-4 w-4" aria-hidden /> {m.translator.scan}
+          </button>
+        )}
+        {scanOpen && <ScanCamera onClose={() => setScanOpen(false)} />}
         <Textarea placeholder={m.translator.yourText} value={text} onChange={(e) => setText(e.target.value)} />
         <Button className="mt-3" disabled={!text.trim()} onClick={runTranslate}>{m.translator.translate}</Button>
         <p className={cn("mt-3 text-sm text-muted-foreground", result && "text-foreground")}>{result || m.translator.offline}</p>
