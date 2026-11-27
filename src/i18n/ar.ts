@@ -90,7 +90,7 @@ export const ar: Messages = {
     journalTitle: "أضف ذكرى", journalText: "اكتب لحظة من {place} وهي ما زالت في ذاكرتك.",
   },
   profile: {
-    title: "الملف الشخصي", name: "الاسم", bio: "نبذة عنك", bioPlaceholder: "سطر عن طريقتك في السفر", country: "الدولة",
+    title: "الملف الشخصي", name: "الاسم", bio: "نبذة عنك", bioPlaceholder: "سطر عن طريقتك في السفر", country: "الدولة", countryHint: "غيرها في أي وقت - الاقتراحات والأكل والأسعار تتبع اختيارك.",
     interests: "الاهتمامات", appearance: "المظهر", dark: "الوضع الداكن", reminders: "التذكيرات", tripReminders: "تذكيرات الرحلات",
     journalReminders: "تذكيرات اليوميات", privacy: "الخصوصية", preciseLocation: "استخدام الموقع الدقيق", shareJournal: "مشاركة اليوميات", usageStats: "مشاركة إحصاءات الاستخدام",
     saved: "تم الحفظ",
