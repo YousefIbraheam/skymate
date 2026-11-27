@@ -28,6 +28,21 @@ export interface Review {
   date: string;
 }
 
+export interface TranslationRecord {
+  id: string;
+  lang: string;
+  text: string;
+  result: string;
+  date: string;
+}
+
+export interface CustomPlace {
+  id: string;
+  name: string;
+  destinationId: string;
+  date: string;
+}
+
 export interface AppState {
   onboarded: boolean;
   country: string;
@@ -45,6 +60,11 @@ export interface AppState {
   interests: string[];
   reviews: Record<string, Review[]>;
   readNotifications: string[];
+  avatar: string;
+  cover: string;
+  translatorHistory: TranslationRecord[];
+  translatorFavorites: string[];
+  customPlaces: CustomPlace[];
   notifications: { tripReminders: boolean; journalReminders: boolean };
   privacy: { preciseLocation: boolean; shareJournal: boolean; usageStats: boolean };
 }
@@ -66,6 +86,11 @@ export const initialState: AppState = {
   interests: [],
   reviews: {},
   readNotifications: [],
+  avatar: "",
+  cover: "",
+  translatorHistory: [],
+  translatorFavorites: [],
+  customPlaces: [],
   notifications: { tripReminders: false, journalReminders: false },
   privacy: { preciseLocation: false, shareJournal: false, usageStats: false },
 };
@@ -128,7 +153,7 @@ const toggle = (list: string[], id: string) => (list.includes(id) ? list.filter(
 /** Fields that belong to one account. A new or different user starts from zero. */
 const userData = (): Partial<AppState> => ({
   saved: [], visits: {}, notes: {}, trips: [], journal: [], foodWanted: [], foodTried: [],
-  bio: "", interests: [], reviews: {}, readNotifications: [],
+  bio: "", interests: [], reviews: {}, readNotifications: [], translatorHistory: [], translatorFavorites: [], customPlaces: [],
 });
 
 export const actions = {
@@ -172,4 +197,24 @@ export const actions = {
     setState((s) => ({ ...s, reviews: { ...s.reviews, [placeId]: (s.reviews[placeId] ?? []).filter((r) => r.id !== id) } })),
   markNotificationRead: (id: string) =>
     setState((s) => (s.readNotifications.includes(id) ? s : { ...s, readNotifications: [...s.readNotifications, id] })),
+  toggleFavoritePhrase: (key: string) => setState((s) => ({ ...s, translatorFavorites: toggle(s.translatorFavorites, key) })),
+  recordTranslation: (entry: Omit<TranslationRecord, "id" | "date">) =>
+    setState((s) => ({
+      ...s,
+      translatorHistory: [{ ...entry, id: newId(), date: new Date().toISOString().slice(0, 10) }, ...s.translatorHistory].slice(0, 20),
+    })),
+  clearTranslatorHistory: () => setState((s) => ({ ...s, translatorHistory: [] })),
+  addCustomPlace: (place: Omit<CustomPlace, "id">) =>
+    setState((s) => ({ ...s, customPlaces: [{ ...place, id: newId() }, ...s.customPlaces] })),
+  deleteCustomPlace: (id: string) => setState((s) => ({ ...s, customPlaces: s.customPlaces.filter((p) => p.id !== id) })),
+  clearAllData: () => {
+    try {
+      window.localStorage.removeItem(STORAGE_KEY);
+      window.localStorage.removeItem("skymate:user");
+    } catch {
+      /* storage may be blocked */
+    }
+    state = initialState;
+    listeners.forEach((listener) => listener());
+  },
 };

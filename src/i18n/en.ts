@@ -29,16 +29,20 @@ export const en = {
     planTrip: "Plan a trip", level: "Explorer level {n}", xp: "{xp} XP · {pct}% to next level", progress: "{done} of {total} featured places visited",
     quick: "Quick start", forYou: "Places you might like", featured: "Featured destinations",
     actions: { plan: "Plan a trip", explore: "Explore", map: "Open map", translate: "Translate", food: "Local food", journal: "Journal" },
+    recentMemories: "Recent memories", emptyMemories: "No memories yet. Add one from My Travels.",
+    interestsRow: "Follow your interests", seeAll: "See all",
   },
   explore: {
     searchPlaceholder: "Search Amber Fort, tea, pyramids…", allCountries: "All countries", sort: "Sort", topRated: "Top rated",
     lowestCost: "Lowest cost", nameAZ: "Name A–Z", allRegions: "All states / regions", allCities: "All cities", clear: "Clear filters",
     destinations: "Destinations", dishes: "Dishes & food spots", places: "Places", nothing: "Nothing matches your filters yet.",
+    quick: { popular: "Popular", hiddenGems: "Hidden gems", free: "Free", paid: "Paid", visited: "Visited", unvisited: "Unvisited" },
   },
   destination: {
     route: "Suggested route", routeText: "A suggested route — scroll and follow the traveller from stop to stop.",
     bestTime: "Best time to visit", bestTimeNote: "General seasonal guidance, not a live weather forecast. Confirm current conditions and closures before travel.",
     bestMonthsLegend: "Best months", thisMonth: "This month",
+    stop: "Stop {n}", monthGood: "Recommended season", monthOff: "Plan around seasonal conditions", monthHint: "Tap a month for details.",
     climate: "Climate", duration: "Suggested stay", planTrip: "Plan a trip here", history: "History & character", mapDirections: "Map & directions",
     foodSpots: "Food spots & dishes", gems: "Hidden gems & quieter stops", gemsNote: "This starter guide focuses on major sights. Add your own quieter discoveries to My Travels.",
     activities: "Activities", placesToSee: "Places to see", dishes: "Local dishes", unavailable: "Destination unavailable.", budget: "Daily budget",
@@ -61,15 +65,22 @@ export const en = {
   },
   map: {
     title: "Map", choose: "Choose a destination", openIn: "Open in Google Maps", placesHere: "Places here", lat: "Lat", lng: "Lng",
+    legendVisited: "Visited", legendBucket: "Bucket list", legendMemory: "Memories", legendOther: "Other places",
   },
   travels: {
     title: "My Travels", subtitle: "Your visited places and journal.", journal: "Journal", add: "Add memory", caption: "What do you remember?",
     place: "Place", date: "Date", empty: "No memories yet.", bucket: "Bucket list", visited: "Visited places", emptyBucket: "Nothing saved yet.",
+    stats: { places: "Places", cities: "Cities", regions: "Regions", countries: "Countries" },
+    history: "Travel history", emptyHistory: "No visits logged yet. Mark a place as visited from its page.",
+    addPlace: "Add a place you visited", placeName: "Place name", placeNamePlaceholder: "A café, a viewpoint, a street…",
+    where: "Destination", when: "When", addPlaceButton: "Add to history", customTag: "Your own entry",
   },
   translator: {
     title: "Translator", subtitle: "Phrases for the road. Pick a language and tap a phrase.", language: "Language", phrases: "Phrases",
     yourText: "Type something to translate", translate: "Translate", result: "Translation", offline: "Live translation needs a provider connected to the backend. Showing the phrasebook only.",
     scan: "Scan", scanSoon: "Scanning is coming soon. It will connect to the backend.",
+    history: "History", favorites: "Favorites", emptyHistory: "No translations yet.",
+    emptyFavorites: "No favorites yet. Star a phrase to keep it here.", clearHistory: "Clear history", favorite: "Favorite",
   },
   notifications: {
     title: "Notifications", note: "Reminders are shown inside the app only; no push notifications are sent.", empty: "You're all caught up.",
@@ -81,6 +92,21 @@ export const en = {
     interests: "Interests", appearance: "Appearance", dark: "Dark theme", reminders: "Reminders", tripReminders: "Trip reminders",
     journalReminders: "Journal reminders", privacy: "Privacy", preciseLocation: "Use precise location", shareJournal: "Share journal", usageStats: "Share usage stats",
     saved: "Saved",
+    avatar: "Avatar", cover: "Cover",
+    analytics: "Travel analytics", placesVisited: "Places visited", memories: "Memories", dishesTried: "Dishes tried",
+    stops: "Completed stops", countriesLabel: "Countries", citiesLabel: "Cities", byCategory: "Visits by category",
+    achievements: "Achievements", about: "About",
+    aboutText: "Travel Explorer, SkyMate web. Your places, trips and journal stay on this device and work offline.",
+    clearData: "Clear my data", clearConfirm: "Delete all saved places, visits, trips and settings on this device?",
+    ach: {
+      firstFootprints: ["First footprints", "Visit 1 place"], gettingGoing: ["Getting going", "Visit 5 places"],
+      seasoned: ["Seasoned explorer", "Visit 10 places"], cityCollector: ["City collector", "Visit 3 cities"],
+      cityHopper: ["City hopper", "Visit 8 cities"], acrossBorders: ["Across borders", "Visit 2 countries"],
+      continental: ["Continental drift", "Visit 4 countries"], memoryKeeper: ["Memory keeper", "Write 1 memory"],
+      storyteller: ["Storyteller", "Write 5 memories"], bucketFiller: ["Bucket filler", "Save 5 places"],
+      dreamList: ["Dream list", "Save 15 places"], foodie: ["Foodie", "Try 3 dishes"],
+      foodAdventurer: ["Food adventurer", "Try 10 dishes"], planner: ["Planner", "Plan 1 trip"],
+    },
   },
   auth: {
     title: "Sign in", subtitle: "Sign in to share spots and sync your trips.", signIn: "Sign in", register: "Create account", name: "Your name",
@@ -100,7 +126,7 @@ export const en = {
     spotWhere: "City or area", spotText: "Why is it worth a visit?", submit: "Submit spot", signInFirst: "Sign in to share a spot.", pending: "Pending review",
     approved: "Approved", empty: "No spots yet.",
   },
-  regions: { title: "Regions", search: "Search everything", places: "{n} places" },
+  regions: { title: "Regions", search: "Search everything", places: "{n} places", visitedProgress: "{done} of {total} places visited" },
 };
 
 export type Messages = typeof en;

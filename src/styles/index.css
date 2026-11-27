@@ -75,3 +75,9 @@
 @media (prefers-reduced-motion: reduce) {
   *, :before, :after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* Leaflet map: keep panes below the app shell's fixed bars */
+.leaflet-container { z-index: 0; font: inherit; }
+.leaflet-pane { z-index: 1; }
+.leaflet-top, .leaflet-bottom { z-index: 2; }
+.leaflet-popup-content-wrapper { border-radius: 1rem; }

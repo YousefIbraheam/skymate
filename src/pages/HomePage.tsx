@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Compass, Image, Languages, Map, Plane, UtensilsCrossed } from "lucide-react";
-import { destinations, placeCost, getDestination, places } from "../data";
+import { destinations, placeCost, getDestination, getPlace, places, categories } from "../data";
 import { useAppState } from "../store/appStore";
 import { useI18n } from "../i18n";
 import { Button } from "../components/ui/Button";
@@ -77,6 +77,74 @@ export function HomePage() {
           </div>
         ))}
       </section>
+
+      {interests.length > 0 && (
+        <section>
+          <h2 className="mb-3 text-2xl font-semibold">{m.home.interestsRow}</h2>
+          <div className="flex flex-wrap gap-2">
+            {interests.map((id) => {
+              const category = categories.find((c) => c.id === id);
+              return category ? (
+                <Link key={id} to={`/explore?category=${id}`} className="rounded-full bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-accent">
+                  {category.emoji} {category.label}
+                </Link>
+              ) : null;
+            })}
+          </div>
+        </section>
+      )}
+
+      <div className="grid gap-4 lg:grid-cols-2">
+        <Card>
+          <div className="mb-3 flex items-center justify-between">
+            <h2 className="text-2xl font-semibold">{m.home.recentMemories}</h2>
+            <Link to="/travels" className="text-sm font-semibold text-teal">{m.home.seeAll}</Link>
+          </div>
+          {journal.length === 0 ? (
+            <p className="text-sm text-muted-foreground">{m.home.emptyMemories}</p>
+          ) : (
+            <ul className="space-y-2">
+              {journal.slice(0, 3).map((entry) => {
+                const place = getPlace(entry.placeId);
+                return (
+                  <li key={entry.id}>
+                    <Link to={`/place/${entry.placeId}`} className="flex items-center gap-3 rounded-2xl bg-muted p-2 hover:bg-accent">
+                      <Photo src={place?.image} alt={place?.name ?? ""} className="h-12 w-12 rounded-xl" />
+                      <div className="min-w-0">
+                        <p className="truncate text-sm font-semibold">{place?.name}</p>
+                        <p className="truncate text-xs text-muted-foreground">{entry.date} · {entry.caption}</p>
+                      </div>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </Card>
+        <Card>
+          <div className="mb-3 flex items-center justify-between">
+            <h2 className="text-2xl font-semibold">{m.home.bucket}</h2>
+            <Link to="/travels" className="text-sm font-semibold text-teal">{m.home.seeAll}</Link>
+          </div>
+          {saved.length === 0 ? (
+            <p className="text-sm text-muted-foreground">{m.travels.emptyBucket}</p>
+          ) : (
+            <ul className="space-y-2">
+              {saved.slice(0, 4).map((id) => {
+                const place = getPlace(id);
+                return place ? (
+                  <li key={id}>
+                    <Link to={`/place/${id}`} className="flex items-center gap-3 rounded-2xl bg-muted p-2 hover:bg-accent">
+                      <Photo src={place.image} alt={place.name} className="h-12 w-12 rounded-xl" />
+                      <span className="truncate text-sm font-semibold">{place.name}</span>
+                    </Link>
+                  </li>
+                ) : null;
+              })}
+            </ul>
+          )}
+        </Card>
+      </div>
 
       <section className="grid gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">

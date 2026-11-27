@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, CalendarDays, Clock, Wallet } from "lucide-react";
+import { ArrowLeft, CalendarDays, Clock, Star, Wallet } from "lucide-react";
 import { dishesOf, facts, formatMoney, getCountry, getDestination, placesOf, wiki } from "../data";
 import { useI18n } from "../i18n";
 import { BestTime } from "../components/BestTime";
@@ -12,7 +12,7 @@ import { PlaceCard } from "../components/ui/Cards";
 
 export function DestinationPage() {
   const { id = "" } = useParams();
-  const { m } = useI18n();
+  const { m, fill } = useI18n();
   const destination = getDestination(id);
 
   if (!destination) return <EmptyState>{m.destination.unavailable}</EmptyState>;
@@ -54,6 +54,32 @@ export function DestinationPage() {
       </section>
 
       <BestTime destinationId={destination.id} className="border-y py-6" />
+
+      <section>
+        <h2 className="mb-1 text-2xl font-semibold">{m.destination.route}</h2>
+        <p className="mb-4 text-sm text-muted-foreground">{m.destination.routeText}</p>
+        <ol className="relative space-y-3 border-s-2 border-border ps-6">
+          {[...stops].sort((a, b) => b.rating - a.rating).slice(0, 4).map((place, index) => (
+            <li key={place.id} className="relative">
+              <span className="absolute -start-[2.1rem] top-4 grid h-7 w-7 place-items-center rounded-full bg-teal text-xs font-bold text-white ring-4 ring-background">
+                {index + 1}
+              </span>
+              <Link to={`/place/${place.id}`} className="block rounded-3xl bg-card p-4 shadow-soft transition-shadow hover:shadow-lift">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-wide text-teal">{fill(m.destination.stop, { n: index + 1 })}</p>
+                    <h3 className="text-lg font-semibold">{place.name}</h3>
+                  </div>
+                  <span className="inline-flex items-center gap-1 rounded-full bg-secondary px-2.5 py-1 text-xs font-semibold text-secondary-foreground">
+                    <Star className="h-3.5 w-3.5 fill-current" /> {place.rating}
+                  </span>
+                </div>
+                {place.tip && <p className="mt-2 text-sm text-muted-foreground">{place.tip}</p>}
+              </Link>
+            </li>
+          ))}
+        </ol>
+      </section>
 
       {history && (
         <section>
