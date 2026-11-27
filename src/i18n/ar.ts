@@ -128,5 +128,11 @@ export const ar: Messages = {
     spotWhere: "المدينة أو المنطقة", spotText: "لماذا يستحق الزيارة؟", submit: "إرسال المكان", signInFirst: "سجل دخولك لمشاركة مكان.", pending: "قيد المراجعة",
     approved: "تمت الموافقة", empty: "لا توجد أماكن بعد.",
   },
+  admin: {
+    title: "الإشراف", subtitle: "راجع أماكن المجتمع قبل نشرها.",
+    demoNote: "وضع تجريبي: أي حساب مسجل يمكنه مراجعة الأماكن لحين تجهيز الخادم.",
+    signInFirst: "سجل دخولك كمشرف للمراجعة.",
+    pending: "أماكن قيد المراجعة", empty: "لا يوجد شيء بانتظار المراجعة.", approve: "موافقة", reject: "رفض",
+  },
   regions: { title: "المناطق", search: "ابحث في كل شيء", places: "{n} مكانا", visitedProgress: "زرت {done} من {total} مكانا" },
 };
