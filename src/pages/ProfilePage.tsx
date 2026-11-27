@@ -1,8 +1,9 @@
-import { Award, Camera, Trash2 } from "lucide-react";
+import { Award, Camera, Check, Trash2 } from "lucide-react";
 import { actions, useAppState } from "../store/appStore";
 import { categories, countries, getDestination, getPlace } from "../data";
 import { useI18n } from "../i18n";
-import { Input, Select, Textarea } from "../components/ui/fields";
+import { Input, Textarea } from "../components/ui/fields";
+import { Flag } from "../components/ui/Flag";
 import { Card, PageTitle } from "../components/ui/Section";
 import { LanguageSwitch } from "../components/layout/LanguageSwitch";
 import { cn } from "../lib/cn";
@@ -165,12 +166,31 @@ export function ProfilePage() {
       <Card className="space-y-4">
         <label className="block text-sm font-medium">{m.profile.name}<Input className="mt-1" value={s.name} onChange={(e) => actions.update({ name: e.target.value })} /></label>
         <label className="block text-sm font-medium">{m.profile.bio}<Textarea className="mt-1" placeholder={m.profile.bioPlaceholder} value={s.bio} onChange={(e) => actions.update({ bio: e.target.value })} /></label>
-        <label className="block text-sm font-medium">
-          {m.profile.country}
-          <Select className="mt-1 w-full" value={s.country} onChange={(e) => actions.update({ country: e.target.value })}>
-            {countries.map((c) => <option key={c.code} value={c.code}>{c.name}</option>)}
-          </Select>
-        </label>
+        <div>
+          <p className="mb-2 text-sm font-medium">{m.profile.country}</p>
+          <div className="grid gap-3 sm:grid-cols-2" role="group" aria-label={m.profile.country}>
+            {countries.map((c) => {
+              const selected = c.code === s.country;
+              return (
+                <button
+                  key={c.code}
+                  type="button"
+                  aria-pressed={selected}
+                  onClick={() => actions.update({ country: c.code })}
+                  className={cn(
+                    "relative flex items-center gap-3 rounded-3xl bg-muted p-4 text-start transition-colors hover:bg-accent",
+                    selected && "ring-2 ring-primary",
+                  )}
+                >
+                  <Flag code={c.code} className="h-6 w-9 rounded-sm" />
+                  <span className="font-medium">{c.name}</span>
+                  {selected && <Check className="absolute end-4 top-1/2 h-5 w-5 -translate-y-1/2 text-primary" />}
+                </button>
+              );
+            })}
+          </div>
+          <p className="mt-2 text-xs text-muted-foreground">{m.profile.countryHint}</p>
+        </div>
         <div>
           <p className="mb-2 text-sm font-medium">{m.shell.language}</p>
           <LanguageSwitch />
