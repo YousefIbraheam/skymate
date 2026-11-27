@@ -88,7 +88,7 @@ export const en = {
     journalTitle: "Add a memory", journalText: "Write down a moment from {place} while you remember it.",
   },
   profile: {
-    title: "Profile", name: "Name", bio: "About you", bioPlaceholder: "A line about how you like to travel", country: "Home country",
+    title: "Profile", name: "Name", bio: "About you", bioPlaceholder: "A line about how you like to travel", country: "Home country", countryHint: "Switch anytime - suggestions, food and prices follow your pick.",
     interests: "Interests", appearance: "Appearance", dark: "Dark theme", reminders: "Reminders", tripReminders: "Trip reminders",
     journalReminders: "Journal reminders", privacy: "Privacy", preciseLocation: "Use precise location", shareJournal: "Share journal", usageStats: "Share usage stats",
     saved: "Saved",
