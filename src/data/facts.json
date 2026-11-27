@@ -256,5 +256,39 @@
    "Crafts"
   ],
   "summary": "April to October is the dry season; November to March brings heavy tropical showers."
+ },
+ "cairo": {
+  "climate": "Hot desert; very hot summers, mild winters.",
+  "duration": "2–3 days",
+  "activities": [
+   "Museums",
+   "Nile walks",
+   "Historic mosques",
+   "Markets",
+   "Food tours"
+  ],
+  "summary": "Coolest and most comfortable from October to April; summer afternoons are very hot."
+ },
+ "giza": {
+  "climate": "Hot desert; very hot summers, mild winters.",
+  "duration": "1–2 days",
+  "activities": [
+   "Pyramid complex",
+   "Great Sphinx",
+   "Camel rides",
+   "Sound and light show"
+  ],
+  "summary": "Best from October to April, when cooler months make outdoor sightseeing comfortable; summer midday heat is harsh."
+ },
+ "luxor": {
+  "climate": "Hot desert; among Egypt's hottest cities in summer, with mild sunny winters.",
+  "duration": "2–3 days",
+  "activities": [
+   "Temples",
+   "Valley of the Kings",
+   "Nile felucca",
+   "Hot-air balloon"
+  ],
+  "summary": "October to April is ideal for the open-air temples and tombs; summer heat often exceeds 40°C."
  }
 }

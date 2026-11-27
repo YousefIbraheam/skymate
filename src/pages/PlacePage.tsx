@@ -4,6 +4,7 @@ import { ArrowLeft, Bookmark, Clock, Info, Star, Trash2, Wallet } from "lucide-r
 import { categories, placeCost, getDestination, getPlace } from "../data";
 import { actions, useAppState } from "../store/appStore";
 import { useI18n } from "../i18n";
+import { BestTime } from "../components/BestTime";
 import { Button } from "../components/ui/Button";
 import { Input, Textarea } from "../components/ui/fields";
 import { Photo } from "../components/ui/Photo";
@@ -67,6 +68,10 @@ export function PlacePage() {
           </div>
         </div>
       </div>
+
+      <Card>
+        <BestTime destinationId={place.destinationId} />
+      </Card>
 
       <Card>
         <div className="flex items-center justify-between">

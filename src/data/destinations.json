@@ -10,7 +10,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.55 0.1 230), oklch(0.75 0.12 60))",
   "lat": 24.5854,
   "lng": 73.7125,
-  "bestTime": "Oct – Mar",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3500,
   "tags": [
    "Lakes",
@@ -29,7 +29,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.62 0.13 30), oklch(0.78 0.12 70))",
   "lat": 26.9124,
   "lng": 75.7873,
-  "bestTime": "Nov – Feb",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3000,
   "tags": [
    "Forts",
@@ -86,7 +86,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.6 0.1 70), oklch(0.8 0.12 85))",
   "lat": 29.9792,
   "lng": 31.1342,
-  "bestTime": "Nov – Feb",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 2000,
   "tags": [
    "Pyramids",
@@ -105,7 +105,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.55 0.1 50), oklch(0.75 0.13 75))",
   "lat": 25.6872,
   "lng": 32.6396,
-  "bestTime": "Oct – Mar",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 1800,
   "tags": [
    "Temples",
@@ -143,7 +143,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
   "lat": 8.5241,
   "lng": 76.9366,
-  "bestTime": "Oct – Mar",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3000,
   "tags": [
    "Beaches",
@@ -162,7 +162,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
   "lat": 9.9658,
   "lng": 76.2421,
-  "bestTime": "Oct – Mar",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3000,
   "tags": [
    "Heritage walks",
@@ -181,7 +181,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
   "lat": 9.4981,
   "lng": 76.3388,
-  "bestTime": "Oct – Mar",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3000,
   "tags": [
    "Houseboats",
@@ -238,7 +238,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
   "lat": 9.2876,
   "lng": 79.3129,
-  "bestTime": "Nov – Feb",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3000,
   "tags": [
    "Temple visits",
@@ -257,7 +257,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
   "lat": 12.6208,
   "lng": 80.1945,
-  "bestTime": "Nov – Feb",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3000,
   "tags": [
    "Heritage sites",
@@ -295,7 +295,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
   "lat": 12.2958,
   "lng": 76.6394,
-  "bestTime": "Oct – Mar",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3000,
   "tags": [
    "Palaces",
@@ -314,7 +314,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
   "lat": 15.335,
   "lng": 76.46,
-  "bestTime": "Oct – Mar",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3000,
   "tags": [
    "Ruins",
@@ -352,7 +352,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
   "lat": 15.4909,
   "lng": 73.8278,
-  "bestTime": "Oct – Mar",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3000,
   "tags": [
    "Beaches",
@@ -447,7 +447,7 @@
   "gradient": "linear-gradient(150deg, oklch(0.5 0.08 200), oklch(0.74 0.13 60))",
   "lat": 23.7337,
   "lng": 69.8597,
-  "bestTime": "Oct – Mar",
+  "bestTime": "Oct – Apr",
   "dailyBudget": 3000,
   "tags": [
    "White desert",

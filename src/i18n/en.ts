@@ -38,6 +38,7 @@ export const en = {
   destination: {
     route: "Suggested route", routeText: "A suggested route — scroll and follow the traveller from stop to stop.",
     bestTime: "Best time to visit", bestTimeNote: "General seasonal guidance, not a live weather forecast. Confirm current conditions and closures before travel.",
+    bestMonthsLegend: "Best months", thisMonth: "This month",
     climate: "Climate", duration: "Suggested stay", planTrip: "Plan a trip here", history: "History & character", mapDirections: "Map & directions",
     foodSpots: "Food spots & dishes", gems: "Hidden gems & quieter stops", gemsNote: "This starter guide focuses on major sights. Add your own quieter discoveries to My Travels.",
     activities: "Activities", placesToSee: "Places to see", dishes: "Local dishes", unavailable: "Destination unavailable.", budget: "Daily budget",

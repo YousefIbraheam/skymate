@@ -1,22 +1,19 @@
-import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, CalendarDays, Clock, Wallet } from "lucide-react";
-import { bestMonths, dishesOf, facts, formatMoney, getCountry, getDestination, placesOf, wiki } from "../data";
+import { dishesOf, facts, formatMoney, getCountry, getDestination, placesOf, wiki } from "../data";
 import { useI18n } from "../i18n";
+import { BestTime } from "../components/BestTime";
 import { Flag } from "../components/ui/Flag";
 import { Button } from "../components/ui/Button";
 import { Photo } from "../components/ui/Photo";
 import { Card, EmptyState } from "../components/ui/Section";
 import { PlaceCard } from "../components/ui/Cards";
-import { cn } from "../lib/cn";
 
 
 export function DestinationPage() {
   const { id = "" } = useParams();
-  const { m, lang } = useI18n();
-  const monthNames = Array.from({ length: 12 }, (_, i) => new Date(2024, i, 1).toLocaleDateString(lang === "ar" ? "ar" : "en-US", { month: "short" }));
+  const { m } = useI18n();
   const destination = getDestination(id);
-  const [month, setMonth] = useState(new Date().getMonth() + 1);
 
   if (!destination) return <EmptyState>{m.destination.unavailable}</EmptyState>;
 
@@ -24,7 +21,6 @@ export function DestinationPage() {
   const stops = placesOf(destination.id);
   const dishes = dishesOf(destination.id);
   const info = facts[destination.id];
-  const goodMonths = bestMonths[destination.id] ?? [];
   const history = wiki[destination.id];
 
   return (
@@ -57,28 +53,7 @@ export function DestinationPage() {
         </div>
       </section>
 
-      <section className="space-y-4 border-y py-6">
-        <h2 className="text-2xl font-semibold">{m.destination.bestTime}</h2>
-        <div aria-label="Select travel month" className="grid grid-cols-6 gap-2 sm:grid-cols-12">
-          {monthNames.map((name, i) => (
-            <button
-              key={name}
-              type="button"
-              aria-pressed={month === i + 1}
-              onClick={() => setMonth(i + 1)}
-              className={cn(
-                "rounded-xl px-1 py-2 text-xs font-semibold",
-                goodMonths.includes(i + 1) ? "bg-secondary text-secondary-foreground" : "bg-muted text-muted-foreground",
-                month === i + 1 && "ring-2 ring-primary",
-              )}
-            >
-              {name}
-            </button>
-          ))}
-        </div>
-        {info && <p className="text-sm text-muted-foreground">{info.climate} {info.summary}</p>}
-        <p className="text-xs text-muted-foreground">{m.destination.bestTimeNote}</p>
-      </section>
+      <BestTime destinationId={destination.id} className="border-y py-6" />
 
       {history && (
         <section>
