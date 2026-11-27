@@ -154,6 +154,20 @@ export async function submitCommunitySpot(input: Pick<CommunitySpot, "name" | "w
   return spot;
 }
 
+/** UI-only moderation: mark a pending spot approved. The backend teammate replaces this with a real endpoint. */
+export async function approveCommunitySpot(id: string): Promise<void> {
+  if (!USE_MOCK) return void (await request(`/community/spots/${id}/approve`, { method: "POST" }));
+  await new Promise((r) => setTimeout(r, 200));
+  write(SPOTS_KEY, read<CommunitySpot[]>(SPOTS_KEY, seedSpots).map((s) => (s.id === id ? { ...s, status: "approved" as const } : s)));
+}
+
+/** UI-only moderation: reject a pending spot (removes it from the list). */
+export async function rejectCommunitySpot(id: string): Promise<void> {
+  if (!USE_MOCK) return void (await request(`/community/spots/${id}`, { method: "DELETE" }));
+  await new Promise((r) => setTimeout(r, 200));
+  write(SPOTS_KEY, read<CommunitySpot[]>(SPOTS_KEY, seedSpots).filter((s) => s.id !== id));
+}
+
 /* ---------- Translation ---------- */
 
 export async function translate(text: string, to: string): Promise<string> {
