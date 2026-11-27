@@ -126,6 +126,12 @@ export const en = {
     spotWhere: "City or area", spotText: "Why is it worth a visit?", submit: "Submit spot", signInFirst: "Sign in to share a spot.", pending: "Pending review",
     approved: "Approved", empty: "No spots yet.",
   },
+  admin: {
+    title: "Moderation", subtitle: "Review community spots before they go live.",
+    demoNote: "Demo mode: any signed-in account can review spots while the backend is being built.",
+    signInFirst: "Sign in as an admin to moderate.",
+    pending: "Pending spots", empty: "Nothing is waiting for review.", approve: "Approve", reject: "Reject",
+  },
   regions: { title: "Regions", search: "Search everything", places: "{n} places", visitedProgress: "{done} of {total} places visited" },
 };
 
